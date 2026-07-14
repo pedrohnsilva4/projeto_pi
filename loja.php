@@ -64,10 +64,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="loja.html">Loja</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
-                    <li class="nav-item"><a class="btn btn-danger ms-lg-3" href="#">Carrinho (0)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="loja.php">Loja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.php#contato">Contato</a></li>
+                    <li class="nav-item"><a class="btn btn-danger ms-lg-3" href="carrinho.php">Carrinho (0)</a></li>
                 </ul>
             </div>
         </div>
@@ -93,9 +93,11 @@
                     ?>
 
                         <div class="col-md-4">
-                            <a href="single.php?id=<?=$r["id"]?>">
+                            <a style ="text-decoration: none;" href="single.php?id=<?=$r["id"]?>">
                             <div class="card h-100 card-product">
-                                <img src="images/products/<?= $r["imagem"] ?>" class="card-img-top" alt="Kimono">
+                                <div style="height: 400px; width: 300; overflow: hidden;">
+                                    <img src="images/products/<?= $r["imagem"] ?>" class="card-img-top" alt="Kimono">
+                                </div>
                                 <div class="card-body text-center">
                                     <h3 class="card-title mt-2"> <?= $r["titulo"] ?></h3>
                                     <p class="card-text text-muted"><?= $r["descricao"] ?></p>

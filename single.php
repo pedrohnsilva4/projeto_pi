@@ -1,6 +1,5 @@
 <?php
 include '_conn/connection.php';
-
 // Captura o ID da URL e garante que seja um número inteiro
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
@@ -155,13 +154,13 @@ $parcela = $produto["preco"] / 10;
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Arte suave</a>
+            <a class="navbar-brand" href="menu.php">Arte suave</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="loja.php">Loja</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
                     <li class="nav-item"><a class="btn btn-danger ms-lg-3" href="#">Carrinho (0)</a></li>

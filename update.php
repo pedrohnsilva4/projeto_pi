@@ -34,3 +34,5 @@ if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
     $stmt->bindValue(':preco', $price);
     $stmt->execute();
 }
+
+header("Location: select.php");

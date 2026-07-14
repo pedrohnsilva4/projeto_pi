@@ -1,5 +1,6 @@
 <?php
-include '../../_conn/connection.php';
+//include '../../_conn/connection.php';
+include __DIR__ . '/../../_conn/connection.php';
 
 $post = filter_input_array(INPUT_POST);
 
@@ -20,6 +21,11 @@ if (isset($_FILES['imagem'])) {
     $post['imagem'] = $new_name;
 }
 
+if (empty($post['titulo']) || empty($post['descricao']) || empty($post['preco']) || empty($post['imagem'])) {
+    echo "Todos os campos são obrigatórios.";
+    header('location: index.php?erro=empty');
+    exit;
+}
 $stmt = $pdo->prepare("INSERT INTO produtos (titulo, descricao, preco, imagem) VALUES (:titulo, :descricao, :preco, :imagem)");
 $stmt->bindValue(':titulo', $post['titulo']);
 $stmt->bindValue(':descricao', $post['descricao']);
